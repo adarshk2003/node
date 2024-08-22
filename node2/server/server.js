@@ -2,6 +2,7 @@ const http = require('http');
 const port = 3000;
 const url = require('url');
 const fs = require('fs');
+const queryString = require('querystring');
 const server = http.createServer((req, res) => {
     //get the request  url 
     const req_url = req.url;
@@ -17,6 +18,18 @@ const server = http.createServer((req, res) => {
     } else if (parse_url.pathname === '/style.css') {
         res.writeHead(200, { 'content-type': 'text/css' });
         res.end(fs.readFileSync('../client/style.css'));
+    } else if (parse_url.pathname === '/submit' && req.method === 'POST') {
+        console.log('reached ........')
+        let body = '';
+        req.on('data', (chunks) => {
+            console.log(chunks);
+            body += chunks.toString();
+        });
+        req.on('end', () => {
+            console.log(body);
+            let datas = queryString.parse(body);
+            console.log(datas);
+        });
     }
 });
 server.listen(port, () => {
