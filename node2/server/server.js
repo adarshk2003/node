@@ -30,12 +30,6 @@ const server = http.createServer((req, res) => {
             let datas = queryString.parse(body);
             console.log(datas);
         });
-    } else if (parse_url.pathname === 'json') {
-        res.writeHead(200, { 'content-type': 'text/json' });
-        res.end(fs.readFileSync('../client/datas.json'));
-    } else if (parse_url.pathname ==='/script.js') {
-        res.writeHead(200, { 'content-type': 'text/js' });
-        res.end(fs.readFileSync('../datas/script.js'));
     }
 });
 server.listen(port, () => {
