@@ -2,9 +2,3 @@ body{
     background-color: rgb(55, 57, 70);
     color: rgb(136, 135, 135);
 }
-
-.box{
-    border: 2px solid white;
-    height: 35vh;
-    width: 20vw;
-}
