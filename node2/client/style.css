@@ -2,3 +2,8 @@ body{
     background-color: rgb(55, 57, 70);
     color: rgb(136, 135, 135);
 }
+
+
+.name-section,.email-section,.password-section{
+    margin: 30px;
+}
