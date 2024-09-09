@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="form-container1">
+            <form onsubmit="adduser(event)" method="POST">
+                <div class="userformdiv"><span class="userform">AddUser</span></div>
+                <div class="form-row"><input type="text" name="name" id="name" placeholder="Enter your name"> <span
+                        class="clienterr" id="name-err"></span></div>
+                <div class="form-row"><input type="email" name="email" id="email" placeholder="Enter your email"> <span
+                        class="clienterr" id="email-err"></span>
+                </div>
+                <div class="form-row"><input type="password" name="password" id="pass"
+                        placeholder="Enter your password"> <span class="clienterr" id="pass-err"></span>
+                </div>
+                <button class="submit" type="submit">submit</button></span>
+            </form>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>add user</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container">
+            <div class="signup form-container1">
+            <form onsubmit="adduser(event)" method="POST"> 
+                <label for="chk" aria-hidden="true">add user</label>
+            <div class="form-row">
+                <input type="text" name="name" id="name" placeholder=" Enter name" required="">
+                <span class="clienterr" id="name-err"></span>
+            </div>
+            <div class="form-row">
+                <input type="email" name="email"id="email" placeholder="enter Email" required="">
+                <span class="clienterr" id="email-err"></span>
+            </div>
+            <div class="form-row">
+                <input type="password" name="password" id="pass" placeholder="Password!!!!" required="">
+            <span class="clienterr" id="pass-err"></span></div>
+                <button class="button1 submit" type="submit">Sign up</button>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
